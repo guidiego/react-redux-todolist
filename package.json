@@ -1,0 +1,59 @@
+{
+  "name": "react-redux-todolist",
+  "version": "1.0.0",
+  "description": "A sample To Do list using react and redux",
+  "main": "index.js",
+  "scripts": {
+    "build:watch": "webpack-dev-server --mode development --open --hot --history-api-fallback",
+    "build": "webpack --mode production",
+    "lint": "eslint --config .eslintrc ./",
+    "lint:fix": "eslint --config .eslintrc ./ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidiego/react-redux-todolist.git"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Todo"
+  ],
+  "author": "Guilherme Diego <guilherme.albino.francisco@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guidiego/react-redux-todolist/issues"
+  },
+  "homepage": "https://github.com/guidiego/react-redux-todolist#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "node-uid": "^0.1.3",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.2.0"
+  }
+}
