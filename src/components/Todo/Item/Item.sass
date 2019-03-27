@@ -7,6 +7,16 @@
     font-size: 14px
     margin-top: 20px
     cursor: pointer
+    position: relative
+
+    & > div
+        position: absolute
+        display: none
+        right: 40px
+        color: red
+
+    &:hover > div
+        display: block
 
     &:before
         content: 'x'

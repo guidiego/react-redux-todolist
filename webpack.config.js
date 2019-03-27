@@ -4,19 +4,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
-  filename: './index.html',
+  filename: '../index.html',
 });
 
 const cssPlugin = new MiniCssExtractPlugin({ // define where to save the file
-  filename: 'dist/[name].bundle.css',
+  filename: '[name].bundle.css',
 });
 
 module.exports = {
   entry: './src/index.jsx',
   output: {
-    path: path.resolve('docs'),
+    path: path.resolve('docs', 'react-redux-todolist'),
     filename: 'bundled.js',
-    publicPath: '/',
+    publicPath: '/react-redux-todolist',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
