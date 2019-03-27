@@ -2,22 +2,34 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+let cssPluginPrefix = 'dist/';
+let htmlPluginPrefix = './';
+const bundleOutput = {
+  path: path.resolve('docs'),
+  filename: 'bundled.js',
+  publicPath: '/',
+};
+
+if (process.env.NODE_ENV === 'production') {
+  cssPluginPrefix = '';
+  htmlPluginPrefix = '../';
+  bundleOutput.path = path.resolve('docs', 'react-redux-todolist');
+  bundleOutput.publicPath = '/react-redux-todolist';
+}
+
+
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
-  filename: '../index.html',
+  filename: `${htmlPluginPrefix}index.html`,
 });
 
-const cssPlugin = new MiniCssExtractPlugin({ // define where to save the file
-  filename: '[name].bundle.css',
+const cssPlugin = new MiniCssExtractPlugin({
+  filename: `${cssPluginPrefix}[name].bundle.css`,
 });
 
 module.exports = {
   entry: './src/index.jsx',
-  output: {
-    path: path.resolve('docs', 'react-redux-todolist'),
-    filename: 'bundled.js',
-    publicPath: '/react-redux-todolist',
-  },
+  output: bundleOutput,
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: [

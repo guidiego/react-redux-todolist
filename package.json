@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:watch": "webpack-dev-server --mode development --open --hot --history-api-fallback",
-    "build": "webpack --mode production",
+    "build": "NODE_ENV=production webpack --mode production",
     "lint": "eslint --config .eslintrc ./",
     "lint:fix": "eslint --config .eslintrc ./ --fix"
   },
