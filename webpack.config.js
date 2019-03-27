@@ -13,7 +13,6 @@ const bundleOutput = {
 if (process.env.NODE_ENV === 'production') {
   cssPluginPrefix = '';
   htmlPluginPrefix = '../';
-  bundleOutput.path = path.resolve('docs', 'react-redux-todolist');
   bundleOutput.publicPath = '/react-redux-todolist';
 }
 
